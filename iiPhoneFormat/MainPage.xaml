@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="iiPhoneFormat.MainPage">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="70"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <BoxView BackgroundColor="Aqua"/>
+        <Label Text="Phone # Formatter"
+               HorizontalOptions="Center"
+               VerticalOptions="Center"
+               FontSize="30"
+               TextColor="Black"/>
+        <Entry x:Name="PhoneEntry"
+               Placeholder="Enter Number"
+               Grid.Row="1"
+               VerticalOptions="Center"
+               FontSize="30"
+               Margin="30,0"/>
+        <StackLayout Orientation="Horizontal"
+                     Grid.Row="2">
+            <Button Text="Format Number"
+                    x:Name="BtnFormat"
+                    FontSize="15"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="Center"
+                    Clicked="BtnFormat_Clicked"
+                    />
+            <Button Text="UnFormat Number"
+                    x:Name="BtnUnFormat"
+                    FontSize="15"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="Center"
+                    Clicked="BtnUnFormat_Clicked"
+                    />
+        </StackLayout>
+        <Label x:Name="LblResults"
+               Text="Results..."
+               Grid.Row="3"
+               HorizontalOptions="Center"
+               VerticalOptions="Center"
+               FontSize="30"/>
+    </Grid>
+
+</ContentPage>
